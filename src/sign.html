@@ -5,38 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="smart jobs" content="smart jobs sign in page">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cssjs/common.css">
-    <link rel="stylesheet" href="cssjs/signup.css">
     <title>Sign In or Sign Up</title>
 </head>
 
 <body lang="en">
-    <header class="header">
-        <img src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
-        <nav class="nav-bar">
-            <a class="nav-bar__home" href="index.html" >Home</a>
-            <a class="nav-bar__jobs" href="jobs.html" >Jobs</a>
-            <a class="nav-bar__post-jobs" href="postJobs.html" >Post Jobs</a>
-            <a class="nav-bar__saved-jobs" href="savedJobs.html" >Saved Jobs</a>
-            <a class="nav-bar__about-us" href="about.html" >About Us</a>
-            <a class="nav-bar__contact-us" href="contact.html" >Contact Us</a>
-            <a class="nav-bar__sign-in" href="sign.html" >Sign in/up</a>
+    <header >
+        <img width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
+        <nav>
+            <a class="home" href="index.html" >Home</a>
+            <a class="jobs" href="jobs.html" >Jobs</a>
+            <a class="post-jobs" href="postJobs.html" >Post Jobs</a>
+            <a class="saved-jobs" href="savedJobs.html" >Saved Jobs</a>
+            <a class="about-us" href="about.html" >About Us</a>
+            <a class="contact-us" href="contact.html" >Contact Us</a>
+            <a class="sign-in-up" href="sign.html" >Sign in/up</a>
         </nav>
-
-        <img class="menu menu--open" onclick="openMenu()" src="images/open-menu.png" alt="">
-        <nav class="nav-bar nav-bar--minimized">
-            <img class="menu menu--close" onclick="closeMenu()" src="images/close-menu.png" alt="">
-            <div class="nav-bar__elements">
-                <a class="nav-bar__home" href="index.html" >Home</a>
-                <a class="nav-bar__jobs" href="jobs.html" >Jobs</a>
-                <a class="nav-bar__post-jobs" href="postJobs.html" >Post Jobs</a>
-                <a class="nav-bar__saved-jobs" href="savedJobs.html" >Saved Jobs</a>
-                <a class="nav-bar__about-us" href="about.html" >About Us</a>
-                <a class="nav-bar__contact-us" href="contact.html" >Contact Us</a>
-                <a class="nav-bar__sign-in" href="sign.html" >Sign in/up</a>  
-            </div>
-        </nav>
-
     </header>
 
     <main class="main-content">
@@ -44,56 +27,32 @@
         <section class="sign-up">
             <h2>Sign up</h2>
 
-            <form>
+            <form action="submit">
 
-                <div class="sign-up__first">
-                    <label for="first">First Name</label>
-                    <p class="error" id="error-first-u"></p>
-                    <input type="text" id="first"><br>
-                </div>
-
-                <div class="sign-up__last">
-                    <label for="last">Last Name</label>
-                    <p class="error" id="error-last-u"></p>
-                    <input type="text" id="last"><br>
-                </div>
-
-                <div class="sign-up__email">
-                    <label for="email">Email</label>
-                    <p class="error" id="error-email-u"></p>
-                    <input type="email" id="email"><br>
-                </div>
-
-                <div class="sign-up__pass">
-                    <label for="password">Password</label>
-                    <p class="error" id="error-pass-u"></p>
-                    <input type="password" id="password"><br>
-                </div>
-                <button class="btn btn--sign-up" onclick="validateSignUp()" type="button">Sign up</button>
-                <span onclick="toSignIn()">| Sign in |</a>
+                <label for="first">First Name</label>
+                <input type="text" id="first"><br>
+                <label for="last">Last Name</label>
+                <input type="text" id="last"><br>
+                <label for="email">Email</label>
+                <input type="email" id="email"><br>
+                <label for="password">Password</label>
+                <input type="password" id="password"><br>
+                <button type="submit">Sign up</button>
+                <a href="">sign in</a>
 
 
             </form>
         </section>
 
-        <section class="sign-in">
+        <section class="sign-up">
             <h2>Sign in</h2>
-
-            <form>
-                <div class="sign-in__email">
-                    <label for="first-name-l">Email</label>
-                    <p class="error" id="error-email-i"></p>
-                    <input type="email" id="email-l"><br>
-                </div>
-
-                <div class="sign-in__pass">
-                    <label for="password-l">Password</label>
-                    <p class="error" id="error-pass-i"></p>
-                    <input type="password" id="password-l"><br>
-                </div>
-
-                <button class="btn btn--sign-in" type="button" onclick="validateSignIn()">Sign in</button>
-                <span onclick="toSignUp()">| Sign up |</span>
+            <form action="submit">
+                <label for="first-name-l">Email</label>
+                <input type="email" id="first-name-l"><br>
+                <label for="password-l">Password</label>
+                <input type="password" id="password-l"><br>
+                <button type="submit">Sign in</button>
+                <a href="">Sign up</a>
             </form>
 
         </section>
@@ -103,23 +62,22 @@
     <footer class="footer">
         <img width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
         
-        <ul class="footer__contact-info" >
-            <li> <i>+251948671563</i></li>
-            <li> <i>shamilbedru47@gmail.com</i></li> 
-            <li> <Address>Addis Ababa, Ethiopia</Address></li>
+        <ul class="contact-info" >
+            <li>phone: +251948671563</li>
+            <li>email: shamilbedru47@gmail.com</li> 
+            <li><Address>Addis Ababa, Ethiopia</Address></li>
         </ul>
 
-        <div class="footer__socials">
-            <a href="http://facebook.com/"><img src="images/fb.png" alt="facebook icon"></a>
-            <a href="http://instagram.com/"><img src="images/ig.svg" alt="instagram icon"></a>
-            <a href="http://telegram.com/"><img src="images/tg.png" alt="telegam icon"></a>
-            <a href="http://twitter.com/"><img src="images/tw.png" alt="twitter icon"></a>
+        <div class="socials">
+            <a href="http://facebook.com/"><img width="40px" src="images/fb.png" alt="facebook icon"></a>
+            <a href="http://instagram.com/"><img width="40px" src="images/ig.svg" alt="instagram icon"></a>
+            <a href="http://telegram.com/"><img width="40px" src="images/tg.png" alt="telegam icon"></a>
+            <a href="http://twitter.com/"><img width="40px" src="images/tw.png" alt="twitter icon"></a>
         </div>
 
     </footer>
 
     
-
-<script src="cssjs/index.js"></script>
+    
 </body>
 </html>

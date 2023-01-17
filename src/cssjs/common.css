@@ -10,8 +10,8 @@ body{
 }
 
 :root {
-    --primaryColor: #333333;
-    --secondaryColor: #FFFFFF;
+    --primaryColor: #ffffff;
+    --secondaryColor: #5d6456;
     --otherColor1: #E1F4F3;
     --otherColor2: #706C61;
 }
@@ -39,7 +39,8 @@ a{
 
 .header{
     z-index: 100;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     padding: 1rem 4rem 1rem 1rem;
     position: sticky;
     top: 0;
@@ -47,7 +48,7 @@ a{
     display: flex;  
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 6px 10px rgba(111, 111, 111,0.2);
+    box-shadow: 6px 6px 10px rgba(111, 111, 111,0.6),-6px -6px 10px rgba(111, 111, 111,0.6);
 }
 
 .logo{
@@ -68,8 +69,8 @@ a{
 
 
 .nav-bar a:hover{
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     transition: 0.4s;
 }
 
@@ -77,12 +78,15 @@ a{
 
 .footer{
     display: flex;
+    width: 90%;
     align-items: center;
     padding:3rem 1rem;
     justify-content: space-around;
-    box-shadow: 0 -6px 10px rgba(111, 111, 111,0.2);
-    background-color: white;
+    box-shadow: 6px 6px 10px rgba(111, 111, 111,0.6),-6px -6px 10px rgba(111, 111, 111,0.6);
+    background-color: var(--secondaryColor);
     gap: 1rem;
+    margin: auto;
+    color: var(--primaryColor);
 }
 
 .footer__contact-info{
@@ -111,7 +115,7 @@ a{
     right: -100%;
     color: black;
     font-size: 1.4rem;
-    background-color: rgb(2, 11, 4);
+    background-color: var(--secondaryColor);
     transition: 0.8s;
     box-shadow: -0.5px 0 10px rgb(47, 53, 53);
 }
@@ -127,7 +131,7 @@ a{
     width: 100%;
     padding: 0.7rem 1rem;
     border-bottom: 0.5px solid rgb(255, 255, 255);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .nav-bar__elements a:hover{
@@ -148,7 +152,7 @@ a{
 }
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
 
     .nav-bar{
         display: none;
@@ -164,7 +168,6 @@ a{
         top: 1rem;
         left: 1rem;
         width: 2rem;
-        filter: invert(100%);
     }
 
     .nav-bar--minimized{

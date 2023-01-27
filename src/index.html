@@ -5,59 +5,83 @@
     <meta name="smart jobs" content="smart jobs home page">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <title>Home</title>
 </head>
 
 <body lang="en">
-    <header >
-        <img width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
-        <nav>
-            <a class="home" href="index.html" >Home</a>
-            <a class="jobs" href="jobs.html" >Jobs</a>
-            <a class="post-jobs" href="postJobs.html" >Post Jobs</a>
-            <a class="saved-jobs" href="savedJobs.html" >Saved Jobs</a>
-            <a class="about-us" href="about.html" >About Us</a>
-            <a class="contact-us" href="contact.html" >Contact Us</a>
-            <a class="sign-in-up" href="sign.html" >Sign in/up</a>
-        </nav>
-    </header>
+
+    <header class="navbar navbar-expand-lg bg-body-tertiary">
+        
+        <div class="container-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+            
+          <img class="navbar-brand" width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+          </button>
+            
+            <div class="container-fluid">
+              
+              <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    
+                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="jobs.html" >Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="postJobs.html" >Post Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="savedJobs.html" >Saved Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html" >About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html" >Contact Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="sign.html" >Sign in/up</a></li>
+            
+                </ul>
+               
+            </nav>
+            </div>
+
+        </div>
+        
+      </header>
 
     <main class="main-content">
-        <article>
+        <article class="container-fluid bg-body-secondary m-auto text-center pt-5 pb-5" style="width: 100%;">
             <h1>Smart Jobs</h1>
             <p><strong></strong>The #1 job site to find both on site and remote jobs. Find your next onsite, work from home, or hybrid job.</strong></p>
         </article>
 
-        <section class="functionalities">
-            <h1>Functionalities Or Services</h1>
-            <h1>Search Jobs</h1>
-            <h1>Post Jobs</h1>
-            <h1>Save Jobs for later</h1>
+        <section class="functionalities text-center pt-5 pb-5">
+            <h1 class="text-black-100">Functionalities Or Services</h1>
+            <h1 class="text-black-50">Search Jobs</h1>
+            <h1 class="text-black-50">Post Jobs</h1>
+            <h1 class="text-black-50">Save Jobs for later</h1>
         </section>
 
-        <article>
+        <article class="box w-100 text-center">
             <p>Smart Jobs is different and makes it easier to find your next great opportunity. With hundreds of up-to-date listings that connect you directly to company career sites, we make it easier to get to work.</article>
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer  container pt-5 pb-5 text-center bg-body-secondary shadow">
         <img width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
         
-        <ul class="contact-info" >
+        <ul class="contact-info list-unstyled" >
             <li>phone: +251948671563</li>
             <li>email: shamilbedru47@gmail.com</li> 
             <li><Address>Addis Ababa, Ethiopia</Address></li>
         </ul>
 
         <div class="socials">
-            <a href="http://facebook.com/"><img width="40px" src="images/fb.png" alt="facebook icon"></a>
-            <a href="http://instagram.com/"><img width="40px" src="images/ig.svg" alt="instagram icon"></a>
-            <a href="http://telegram.com/"><img width="40px" src="images/tg.png" alt="telegam icon"></a>
-            <a href="http://twitter.com/"><img width="40px" src="images/tw.png" alt="twitter icon"></a>
+            <a class="mt-2" href="https://www.facebook.com/shamil.bedru.73/"><img width="40px" src="images/fb.png" alt="facebook icon"></a>
+            <a class="mt-2" href="https://www.instagram.com/atlas_4753/"><img width="40px" src="images/ig.svg" alt="instagram icon"></a>
+            <a class="mt-2" href="http://t.me/shamilbedru/"><img width="40px" src="images/tg.png" alt="telegam icon"></a>
+            <a class="mt-2" href="https://twitter.com/Shamil_bedru"><img width="40px" src="images/tw.png" alt="twitter icon"></a>
         </div>
 
     </footer>
 
     
+
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>

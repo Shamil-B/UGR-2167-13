@@ -1,83 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="smart jobs" content="smart jobs sign in page">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <title>Sign In or Sign Up</title>
+
 </head>
 
 <body lang="en">
-    <header >
-        <img width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
-        <nav>
-            <a class="home" href="index.html" >Home</a>
-            <a class="jobs" href="jobs.html" >Jobs</a>
-            <a class="post-jobs" href="postJobs.html" >Post Jobs</a>
-            <a class="saved-jobs" href="savedJobs.html" >Saved Jobs</a>
-            <a class="about-us" href="about.html" >About Us</a>
-            <a class="contact-us" href="contact.html" >Contact Us</a>
-            <a class="sign-in-up" href="sign.html" >Sign in/up</a>
-        </nav>
-    </header>
+    <header class="navbar navbar-expand-lg bg-body-tertiary">
+        
+        <div class="container-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+            
+          <img class="navbar-brand rounded-5" width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
 
-    <main class="main-content">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+          </button>
+            
+            <div class="container-fluid">
+              
+              <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 1.1rem;">
+    
+                  <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="jobs.html" >Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="postJobs.html" >Post Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="savedJobs.html" >Saved Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html" >About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html" >Contact Us</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="sign.html" >Sign in/up</a></li>
+            
+                </ul>
+               
+            </nav>
+            </div>
+
+        </div>
+        
+      </header>
+
+    <main class="main-content container">
         
         <section class="sign-up">
-            <h2>Sign up</h2>
+            <h2 class="mb-5 text-center font-monospace">Sign up</h2>
 
-            <form action="submit">
+            <form action="submit" class="text-center mb-5">
 
-                <label for="first">First Name</label>
-                <input type="text" id="first"><br>
-                <label for="last">Last Name</label>
-                <input type="text" id="last"><br>
-                <label for="email">Email</label>
-                <input type="email" id="email"><br>
-                <label for="password">Password</label>
-                <input type="password" id="password"><br>
-                <button type="submit">Sign up</button>
-                <a href="">sign in</a>
+                <label class="form-label" class="form-label" for="first">First Name</label>
+                <input class="form-control mt-4 w-50 m-auto" type="text" id="first"><br>
+                <p class="error text-danger" id="error-first-u"></p>
+
+                <label class="form-label" for="last">Last Name</label>
+                <input class="form-control mt-4 w-50 m-auto" type="text" id="last"><br>
+                <p class="error text-danger" id="error-last-u"></p>
+
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control mt-4 w-50 m-auto" type="email" id="email"><br>
+                <p class="error text-danger" id="error-email-u"></p>
+
+                <label class="form-label" for="password">Password</label>
+                <input class="form-control mt-4 w-50 m-auto" type="password" id="password"><br>
+                <p class="error text-danger" id="error-pass-u"></p>
+
+                <button class="btn btn-primary" type="button" onclick="validateSignUp()">Sign up</button>
+                <span class="p-3" onclick="toSignIn()" style="cursor: pointer;">sign in</span>
 
 
             </form>
         </section>
 
-        <section class="sign-up">
-            <h2>Sign in</h2>
-            <form action="submit">
-                <label for="first-name-l">Email</label>
-                <input type="email" id="first-name-l"><br>
-                <label for="password-l">Password</label>
-                <input type="password" id="password-l"><br>
-                <button type="submit">Sign in</button>
-                <a href="">Sign up</a>
+        <section class="sign-in" style="display: none;">
+            <h2 class="mb-5 text-center font-monospace">Sign in</h2>
+            <form action="submit" class="text-center">
+                <label class="form-label" for="email-l">Email</label>
+                <input class="form-control mt-4 w-50 m-auto" type="email" id="email-l"><br>
+                <p class="error text-danger" id="error-email-i"></p>
+
+                <label class="form-label" for="password-l">Password</label>
+                <input class="form-control mt-4 w-50 m-auto" type="password" id="password-l"><br>
+                <p class="error text-danger" id="error-pass-i"></p>
+
+                <button class="btn btn-primary mt-5 mb-5" type="button" onclick="validateSignIn()">Sign in</button>
+                <span class="p-3" onclick="toSignUp()" style="cursor: pointer;">Sign up</span>
             </form>
 
         </section>
     </main>
 
     
-    <footer class="footer">
+    <footer class="footer  container pt-5 pb-5 text-center bg-body-secondary shadow">
         <img width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
         
-        <ul class="contact-info" >
+        <ul class="contact-info list-unstyled" >
             <li>phone: +251948671563</li>
             <li>email: shamilbedru47@gmail.com</li> 
             <li><Address>Addis Ababa, Ethiopia</Address></li>
         </ul>
 
         <div class="socials">
-            <a href="http://facebook.com/"><img width="40px" src="images/fb.png" alt="facebook icon"></a>
-            <a href="http://instagram.com/"><img width="40px" src="images/ig.svg" alt="instagram icon"></a>
-            <a href="http://telegram.com/"><img width="40px" src="images/tg.png" alt="telegam icon"></a>
-            <a href="http://twitter.com/"><img width="40px" src="images/tw.png" alt="twitter icon"></a>
+            <a class="mt-2" href="https://www.facebook.com/shamil.bedru.73/"><img width="40px" src="images/fb.png" alt="facebook icon"></a>
+            <a class="mt-2" href="https://www.instagram.com/atlas_4753/"><img width="40px" src="images/ig.svg" alt="instagram icon"></a>
+            <a class="mt-2" href="http://t.me/shamilbedru/"><img width="40px" src="images/tg.png" alt="telegam icon"></a>
+            <a class="mt-2" href="https://twitter.com/Shamil_bedru"><img width="40px" src="images/tw.png" alt="twitter icon"></a>
         </div>
 
     </footer>
 
     
-    
+
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script> 
+<script src="index.js"></script>   
 </body>
 </html>

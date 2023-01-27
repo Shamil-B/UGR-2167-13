@@ -5,53 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="smart jobs" content="smart jobs post jobs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
     <title>Post Jobs</title>
 </head>
 <body lang="en">
-    <header >
-        <img width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
-        <nav>
-            <a class="home" href="index.html" >Home</a>
-            <a class="jobs" href="jobs.html" >Jobs</a>
-            <a class="post-jobs" href="postJobs.html" >Post Jobs</a>
-            <a class="saved-jobs" href="savedJobs.html" >Saved Jobs</a>
-            <a class="about-us" href="about.html" >About Us</a>
-            <a class="contact-us" href="contact.html" >Contact Us</a>
-            <a class="sign-in-up" href="sign.html" >Sign in/up</a>
-        </nav>
-    </header>
+    
+    <header class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+            
+          <img class="navbar-brand" width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
 
-    <main class="main-content">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+          </button>
+            
+            <div class="container-fluid">
+              
+              <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    
+                  <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="jobs.html" >Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="postJobs.html" >Post Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="savedJobs.html" >Saved Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html" >About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html" >Contact Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="sign.html" >Sign in/up</a></li>
+            
+                </ul>
+               
+            </nav>
+            </div>
+
+        </div>
+        
+      </header>
+
+    <main class="main-content container text-center">
         <h2>Post a job</h2>
 
-        <section class="sign-up">
-            <form action="submit">
+        <section class="sign-up mt-4">
+            <form action="submit" class="mb-3 needs-validation" novalidate></form>
 
                 <label for="name">Company Name</label>
-                <input type="text" id="name"><br>
+                <p class="error text-danger" id="error-comp-name"></p>
+                
+
+                <input class="form-control mt-4 w-50 m-auto" type="text" id="name"><br>
 
                 <label for="title">Job Title</label>
-                <input type="text" id="title"><br>
+                <p class="error text-danger" id="error-title"></p>
+
+                <input class="form-control mt-4 w-50 m-auto" type="text" id="title"><br>
 
                 <label for="desc">Job Description</label>
-                <input type="text" id="desc"><br>
+                <p class="error text-danger" id="error-desc"></p>
+
+                <input class="form-control mt-4 w-50 m-auto" type="text" id="desc"><br>
 
                 <label for="job-type">Job Type</label>
-                <input type="text" id="job-type"><br>
+                <p class="error text-danger" id="error-type"></p>
+
+                <input class="form-control mt-4 w-50 m-auto" type="text" id="job-type"><br>
 
                 <label for="loc">Location</label>
-                <input type="text" id="loc"><br>
+                <p class="error text-danger" id="error-loc"></p>
+
+                <input class="form-control mt-4 w-50 m-auto" type="text" id="loc"><br>
 
                 <label for="end-date">End Date</label>
-                <input type="date" id="end-date"><br>
+                <p class="error text-danger" id="error-date"></p>
+
+                <input class="form-control mt-4 w-50 m-auto" type="date" id="end-date"><br>
 
                 <label for="web">Company Website</label>
-                <input type="text" id="web"><br>
+                <p class="error text-danger" id="error-website"></p>
+
+                <input class="form-control mt-4 w-50 m-auto" type="text" id="web"><br>
 
                 <label for="email">Email</label>
-                <input type="email" id="email"><br>
+                <p class="error text-danger" id="error-email"></p>
 
-                <button type="submit">Post</button>
+                <input class="form-control mt-4 w-50 m-auto" type="email" id="email"><br>
+
+                <button class="btn btn-primary mb-5" type="button" onclick="validatePost()">Post</button>
 
 
             </form>
@@ -60,25 +99,27 @@
     </main>
 
     
-    <footer class="footer">
+    <footer class="footer  container pt-5 pb-5 text-center bg-body-secondary shadow">
         <img width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
         
-        <ul class="contact-info" >
+        <ul class="contact-info list-unstyled" >
             <li>phone: +251948671563</li>
             <li>email: shamilbedru47@gmail.com</li> 
             <li><Address>Addis Ababa, Ethiopia</Address></li>
         </ul>
 
         <div class="socials">
-            <a href="http://facebook.com/"><img width="40px" src="images/fb.png" alt="facebook icon"></a>
-            <a href="http://instagram.com/"><img width="40px" src="images/ig.svg" alt="instagram icon"></a>
-            <a href="http://telegram.com/"><img width="40px" src="images/tg.png" alt="telegam icon"></a>
-            <a href="http://twitter.com/"><img width="40px" src="images/tw.png" alt="twitter icon"></a>
+            <a class="mt-2" href="https://www.facebook.com/shamil.bedru.73/"><img width="40px" src="images/fb.png" alt="facebook icon"></a>
+            <a class="mt-2" href="https://www.instagram.com/atlas_4753/"><img width="40px" src="images/ig.svg" alt="instagram icon"></a>
+            <a class="mt-2" href="http://t.me/shamilbedru/"><img width="40px" src="images/tg.png" alt="telegam icon"></a>
+            <a class="mt-2" href="https://twitter.com/Shamil_bedru"><img width="40px" src="images/tw.png" alt="twitter icon"></a>
         </div>
 
     </footer>
 
     
-    
+
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="index.js"></script>
 </body>
 </html>

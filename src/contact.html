@@ -5,85 +5,121 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="smart jobs" content="smart jobs contact jobs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <title>Contact</title>
 </head>
 
 
 <body lang="en">
-    <header >
-        <img width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
-        <nav>
-            <a class="home" href="index.html" >Home</a>
-            <a class="jobs" href="jobs.html" >Jobs</a>
-            <a class="post-jobs" href="postJobs.html" >Post Jobs</a>
-            <a class="saved-jobs" href="savedJobs.html" >Saved Jobs</a>
-            <a class="about-us" href="about.html" >About Us</a>
-            <a class="contact-us" href="contact.html" >Contact Us</a>
-            <a class="sign-in-up" href="sign.html" >Sign in/up</a>
-        </nav>
-    </header>
+    <header class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+            
+          <img class="navbar-brand" width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
 
-    <main class="main-content">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+          </button>
+            
+            <div class="container-fluid">
+              
+              <nav class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <section class="heading">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    
+                  <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="jobs.html" >Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="postJobs.html" >Post Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="savedJobs.html" >Saved Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html" >About Us</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="contact.html" >Contact Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="sign.html" >Sign in/up</a></li>
+            
+                </ul>
+               
+            </nav>
+            </div>
+
+        </div>
+        
+      </header>
+
+    <main class="main-content container">
+
+            <section class="heading  text-center">
                 <h1>Contact Us</h1>
                 <h2>How can we help?</h2>
             </section>
 
-            <section class="content">
+            <section class="content mt-5 text-center">
 
-                <div class="contact-info">Contact Info</h3>
-                    <table>
+                <div class="contact-info"><h5 class="text-center">Contact Info</h5>
+                    <table class="table table-bordered w-50 m-auto mt-5">
                         <tr><td>Address:</td><td><address>Addis Ababa, Ethiopia</address></td></tr>
                         <tr><td>Phone:</td><td>+251948671563</td></tr>
                         <tr><td>Email:</td><td>shamilbedru47@gmail.com</td></tr>
-                        <tr><td><audio src="audios/contact-info.mp3" alt="our contact information in audio" controls></audio></td></tr>
                     </table>
                 </div>
+                    
+                <audio class="mt-5" src="audios/contact-info.mp3" alt="our contact information in audio" controls></audio>
 
-                <div class="feedback-form">
-                    <form action="submit">
+
+                <div class="feedback-form mt-5 p-5 mb-5 text-center">
+                    <form action="submit mb-3">
                         
-                        <label for="first-name">First Name: </label>
-                        <input type="text" name="first-name" id="first-name" required><br>
-                        <label for="last-name">Last Name: </label>
-                        <input type="text" name="last-name" id="last-name"><br>
-                        <label for="company-name">Company Name: </label>
-                        <input type="text" name="company-name" id="company-name"><br>
-                        <label for="company-email">Company Email: </label>
-                        <input type="email" name="company-email" id="company-email"><br>
-                        <label for="country">Country: </label>
-                        <input type="text" name="country" id="country"><br>
-                        <label for="comment">Comment: </label>
-                        <input type="text" name="comment" id="comment"><br>
+                        <label class="form-label" for="first-name">First Name</label>
+                        <input class="form-control mt-4 w-50 m-auto" type="text" name="first-name" id="first-name" required><br>
+                        <p class="error text-danger" id="error-first"></p>
 
-                        <button type="submit">Submit</button>
+                        <label class="form-label" for="last-name">Last Name</label>
+                        <input class="form-control mt-4 w-50 m-auto" type="text" name="last-name" id="last-name"><br>
+                        <p class="error text-danger" id="error-last"></p>
+
+                        <label class="form-label" for="company-name">Company Name</label>
+                        <input class="form-control mt-4 w-50 m-auto" type="text" name="company-name" id="company-name"><br>
+                        <p class="error text-danger" id="error-comp-name"></p>
+
+                        <label class="form-label" for="company-email">Company Email</label>
+                        <input class="form-control mt-4 w-50 m-auto" type="email" name="company-email" id="company-email"><br>
+                        <p class="error text-danger" id="error-comp-email"></p>
+
+                        <label class="form-label" for="country">Country</label>
+                        <input class="form-control mt-4 w-50 m-auto" type="text" name="country" id="country"><br>
+                        <p class="error text-danger" id="error-country"></p>
+
+                        <label class="form-label" for="comment">Comment</label>
+                        <input class="form-control mt-4 w-50 m-auto" type="text" name="comment" id="comment"><br>
+                        <p class="error text-danger" id="error-comment"></p>
+
+
+                        <button class="btn btn-primary mt-4 mb-5" type="button" onclick="validateFeedback()">Submit</button>
                     </form>
                 </div>
             </section>
     </main>
 
     
-    <footer class="footer">
+    <footer class="footer  container pt-5 pb-5 text-center bg-body-secondary shadow">
         <img width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
         
-        <ul class="contact-info" >
+        <ul class="contact-info list-unstyled" >
             <li>phone: +251948671563</li>
             <li>email: shamilbedru47@gmail.com</li> 
             <li><Address>Addis Ababa, Ethiopia</Address></li>
         </ul>
 
         <div class="socials">
-            <a href="http://facebook.com/"><img width="40px" src="images/fb.png" alt="facebook icon"></a>
-            <a href="http://instagram.com/"><img width="40px" src="images/ig.svg" alt="instagram icon"></a>
-            <a href="http://telegram.com/"><img width="40px" src="images/tg.png" alt="telegam icon"></a>
-            <a href="http://twitter.com/"><img width="40px" src="images/tw.png" alt="twitter icon"></a>
+            <a class="mt-2" href="https://www.facebook.com/shamil.bedru.73/"><img width="40px" src="images/fb.png" alt="facebook icon"></a>
+            <a class="mt-2" href="https://www.instagram.com/atlas_4753/"><img width="40px" src="images/ig.svg" alt="instagram icon"></a>
+            <a class="mt-2" href="http://t.me/shamilbedru/"><img width="40px" src="images/tg.png" alt="telegam icon"></a>
+            <a class="mt-2" href="https://twitter.com/Shamil_bedru"><img width="40px" src="images/tw.png" alt="twitter icon"></a>
         </div>
 
     </footer>
 
     
-    
+
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="index.js"></script>   
 </body>
 
 </html>

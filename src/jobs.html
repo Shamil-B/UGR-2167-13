@@ -5,86 +5,122 @@
     <meta name="smart jobs" content="smart jobs search jobs">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
     <title>Search Jobs</title>
 </head>
 
 <body lang="en">
-    <header >
-        <img width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
-        <nav>
-            <a class="home" href="index.html" >Home</a>
-            <a class="jobs" href="jobs.html" >Jobs</a>
-            <a class="post-jobs" href="postJobs.html" >Post Jobs</a>
-            <a class="saved-jobs" href="savedJobs.html" >Saved Jobs</a>
-            <a class="about-us" href="about.html" >About Us</a>
-            <a class="contact-us" href="contact.html" >Contact Us</a>
-            <a class="sign-in-up" href="sign.html" >Sign in/up</a>
-        </nav>
-    </header>
+    <header class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+            
+          <img class="navbar-brand" width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
 
-    <main class="main-content">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+          </button>
+            
+            <div class="container-fluid">
+              
+              <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
     
-            <label for="search">Find jobs: </label>
-            <input type="search" name="search" id="search"> <button>Search</button>
-            <section class="search-results">
-                <h1>Search results</h1>
-                <ol>
-                    <li>
-                        <div>
-                            <h2>Title: <span>Finance Manager</span></h2>
-                            <h2>Company: <span>Shemu Group</span></h2>
-                            <h2>Job description:Company Profile Shemu Group is a conglomerate company composed of Shemu PLC, Asveza Ethiopia Retailing Share Company other functional private limited companies with a fast growth track record. The Companies in the group engaged in manufacturing (liquid soap, bar soap, Edible oil and shortening products), retail service providing, printing, trading and engineering</h2>
-                            <h2>Date: <span>23/12/2022</span></h2>
-                            <h2>Location: <span>Dire Dawa, Dire Dawa</span></h2>
-                        </div>
+                  <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="jobs.html" >Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="postJobs.html" >Post Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="savedJobs.html" >Saved Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html" >About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html" >Contact Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="sign.html" >Sign in/up</a></li>
+            
+                </ul>
+               
+            </nav>
+            </div>
+
+        </div>
+        
+      </header>
+
+    <main class="main-content container-fluid mb-3">
+    
+            <label for="search" class="form-label">Find jobs </label>
+            <input class="form-control w-25" type="search" name="search" id="search" style="display:inline;" required> 
+            <button class="btn btn-secondary">Search</button>
+
+            <section class="search-results container-fluid">
+                <h1 class="mt-4 mb-5 display-6">Search results</h1>
+                <ol class="list-group list-group-flush">
+                    <li class="list-group-item bg-dark-subtle text-black-90 pt-5 pb-5 mt-2">
+                        
+                            <h5>Title: <span>Finance Manager</span></h5>
+                            <h5>Company: <span>Shemu Group</span></h5>
+                            <h5>Job description:Company Profile Shemu Group is a conglomerate company composed of Shemu PLC, Asveza Ethiopia Retailing Share Company other functional private limited companies with a fast growth track record. The Companies in the group engaged in manufacturing (liquid soap, bar soap, Edible oil and shortening products), retail service providing, printing, trading and engineering</h5>
+                            <h5>Date: <span>23/12/2022</span></h5>
+                            <h5>Location: <span>Dire Dawa, Dire Dawa</span></h5>
+                        
                     </li>
 
-                    <li>
-                        <div>
-                            <h4>Title: <span>Junior Digital Partner</span></h4>
-                            <h4>Company: <span>Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH</span></h4>
-                            <h4>Job description: <p>GIZ provides technical assistance to the MoA’s flagship programs in Sustainable Land Management since their inception, at national, regional and local levels. The new program module “Climate-Sensitive Innovations in Land Management” (CLM) focuses on capacity development and building of SLM actors through policy and institutional advisory, field-level coaching and advisory services</p></h4>
-                            <h4>Date: <span>23/12/2022</span></h4>
-                            <h4>Location: <span>Addis Ababa</span></h4>
-                        </div>
+                    <li class="list-group-item bg-dark-subtle text-black-90 pt-5 pb-5 mt-2">
+                        
+                            <h5>Title: <span>Junior Digital Partner</span></h5>
+                            <h5>Company: <span>Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH</span></h5>
+                            <h5>Job description: <p>GIZ provides technical assistance to the MoA’s flagship programs in Sustainable Land Management since their inception, at national, regional and local levels. The new program module “Climate-Sensitive Innovations in Land Management” (CLM) focuses on capacity development and building of SLM actors through policy and institutional advisory, field-level coaching and advisory services</p></h5>
+                            <h5>Date: <span>23/12/2022</span></h5>
+                            <h5>Location: <span>Addis Ababa</span></h5>
+                        
                     </li>
 
-                    <li>
-                        <div>
-                            <h4>Title: <span>Data Collactor</span></h4>
-                            <h4>Company: <span>Gift Real Estate PLC</span></h4>
-                            <h4>Job description: <p>Collects the necessary data from site and office to prepare take-off sheet and specification and bill of quantities in detail with Engineering department and site; collection and organize material price and availability assessment, equipment rental price and labor wage data; works in cooperation with the purchasing department and office engineering regarding material current price update.</p></h4>
-                            <h4>Date: <span>23/12/2022</span></h4>
-                            <h4>Location: <span>Addis Ababa</span></h4>
-                        </div>
+                    <li class="list-group-item bg-dark-subtle text-black-90 pt-5 pb-5 mt-2">
+                        
+                            <h5>Title: <span>Data Collactor</span></h5>
+                            <h5>Company: <span>Gift Real Estate PLC</span></h5>
+                            <h5>Job description: <p>Collects the necessary data from site and office to prepare take-off sheet and specification and bill of quantities in detail with Engineering department and site; collection and organize material price and availability assessment, equipment rental price and labor wage data; works in cooperation with the purchasing department and office engineering regarding material current price update.</p></h5>
+                            <h5>Date: <span>23/12/2022</span></h5>
+                            <h5>Location: <span>Addis Ababa</span></h5>
+                        
                     </li>
 
                 </ol>
 
-                <h5>pages <a href="">1</a> >> <a href="">2</a> >> <a href="">3</a> ... <a href="">end</a></h5>
+                <nav aria-label="page pagination" class="w-100">
+
+                    <ul class="pagination mt-4 m-auto">
+                      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">...</a></li>
+                      <li class="page-item"><a class="page-link" href="#">end page</a></li>
+                    </ul>
+
+                </nav>
             </section>
         
     </main>
 
     
-    <footer class="footer">
+    <footer class="footer  container pt-5 pb-5 text-center bg-body-secondary shadow">
         <img width="120px" src="images/logo.png" alt="Logo of the website which reads Smart Jobs" class="logo">
         
-        <ul class="contact-info" >
+        <ul class="contact-info list-unstyled" >
             <li>phone: +251948671563</li>
             <li>email: shamilbedru47@gmail.com</li> 
             <li><Address>Addis Ababa, Ethiopia</Address></li>
         </ul>
 
         <div class="socials">
-            <a href="http://facebook.com/"><img width="40px" src="images/fb.png" alt="facebook icon"></a>
-            <a href="http://instagram.com/"><img width="40px" src="images/ig.svg" alt="instagram icon"></a>
-            <a href="http://telegram.com/"><img width="40px" src="images/tg.png" alt="telegam icon"></a>
-            <a href="http://twitter.com/"><img width="40px" src="images/tw.png" alt="twitter icon"></a>
-        </div>
+          <a class="mt-2" href="https://www.facebook.com/shamil.bedru.73/"><img width="40px" src="images/fb.png" alt="facebook icon"></a>
+          <a class="mt-2" href="https://www.instagram.com/atlas_4753/"><img width="40px" src="images/ig.svg" alt="instagram icon"></a>
+          <a class="mt-2" href="http://t.me/shamilbedru/"><img width="40px" src="images/tg.png" alt="telegam icon"></a>
+          <a class="mt-2" href="https://twitter.com/Shamil_bedru"><img width="40px" src="images/tw.png" alt="twitter icon"></a>
+      </div>
 
     </footer>
 
+    
+
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     
     
 </body>
